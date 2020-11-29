@@ -1,4 +1,4 @@
-from predict import predict_pipeline
+from ..predict import predict_pipeline
 import numpy as np
 
 def test_predict_pipeline():
