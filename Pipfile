@@ -5,10 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 ipykernel = "*"
+pytest = "*"
 
 [packages]
 numpy = "*"
 pandas = "*"
+sklearn = "*"
+joblib = "*"
 
 [requires]
 python_version = "3.9"
