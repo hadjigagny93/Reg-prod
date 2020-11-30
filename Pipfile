@@ -7,13 +7,13 @@ verify_ssl = true
 ipykernel = "*"
 pytest = "*"
 
+
 [packages]
 numpy = "*"
 pandas = "*"
 sklearn = "*"
 joblib = "*"
 flask = "*"
-ml = {editable = true, path = "."}
 
 [requires]
 python_version = "3.9"
