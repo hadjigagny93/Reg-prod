@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 ipykernel = "*"
 pytest = "*"
-
+ml = {editable = true, path = "."}
 
 [packages]
 numpy = "*"
