@@ -5,6 +5,9 @@ import numpy as np
 
 app = Flask(__name__)
 
+# for production env 
+# app.config['DEBUG'] = False
+# see in wsgi.py file 
 
 @app.route('/score', methods=['POST'])
 def score():
@@ -15,6 +18,7 @@ def score():
 
 
 if __name__ == '__main__':
+    # use 0.0.0.0 to use it in container ... fuck linux namespace atrifacts
     app.run(host='0.0.0.0', port=5000)
 
 
