@@ -19,7 +19,7 @@ def score():
 
 if __name__ == '__main__':
     # use 0.0.0.0 to use it in container ... fuck linux namespace atrifacts
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0')
 
 
 
