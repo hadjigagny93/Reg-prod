@@ -14,6 +14,12 @@ jobs:
             echo 'all package installed'
             echo 'Now install ML packaged lib'
             pip install --user .
+      - run:
+          name: Run Unit test for ML model
+          command: |
+            echo 'run test'
+            pytest ml/tests
+            echo 'test success'
 workflows:
   build_test:
     jobs:
