@@ -11,21 +11,15 @@ jobs:
             echo 'being setup env variables'
             echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
             pip install --user -r requirements.txt
-            echo 'all package installed'
-            echo 'Now install ML packaged lib'
             pip install --user .
       - run:
-          name: Run Unit test for ML model
+          name: Run Unit test for ML Model
           command: |
-            echo 'run test'
             pytest ml/tests 
-            echo 'test success'
       - run:
-          name: Run Unit test for Flask web app
+          name: Run Unit test for Flask Web App
           command: |
-            echo 'start test web app'
             pytest web-app/tests
-            echo 'test sucess'
 workflows:
   build_test:
     jobs:
