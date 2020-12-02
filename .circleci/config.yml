@@ -18,7 +18,9 @@ jobs:
           name: Run Unit test for ML model
           command: |
             echo 'run test'
-            pytest ml/tests
+            pytest ml/tests --junitxml=test-reports/junit.xml \
+                            --html=test-reports/pytest_report.html \
+                            --self-contained-html
             echo 'test success'
 workflows:
   build_test:
