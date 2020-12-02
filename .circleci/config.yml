@@ -9,6 +9,9 @@ jobs:
           name: Install Python dependencies 
           command: |
             echo 'being setup env variables'
+            echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
+            pip install --user -r requirements.txt
+            echo 'all package installed'
 
 workflows:
   build_test:
